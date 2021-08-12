@@ -25,7 +25,7 @@ body {
   height: 520px;
   min-width: 250px;
   max-width: 380px;
-  margin: 0 1.2em 0 1.2em;
+  margin: 0 1.3em 0 1.3em;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 35% 65%;
@@ -37,28 +37,27 @@ body {
 .card-ima {
   grid-area: image;
   background-image: url("../images/image-header-mobile.jpg");
-  height: 100%;
   background-size: cover;
+  height: 100%;
   border-radius: 0.4em 0.4em 0 0;
 }
-
-.colorover {
-  border-radius: 0.4em 0.4em 0 0;
-  background-color: #710094;
+.card-ima .colorover {
   width: 100%;
   height: 100%;
+  border-radius: 0.4em 0.4em 0 0;
+  background-color: #710094;
   opacity: 0.5;
 }
 
 .card-conteudo {
-  grid-area: conteudo;
-  text-align: center;
-  padding: 0px 10px 0 10px;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  grid-area: conteudo;
+  text-align: center;
+  padding: 0px 10px 0 10px;
+  color: white;
 }
 .card-conteudo a {
   color: white;
@@ -66,13 +65,13 @@ body {
   font-weight: 700;
 }
 .card-conteudo span {
-  font-weight: 700;
   color: var(--violeta-clara);
+  font-weight: 700;
 }
 .card-conteudo p {
+  color: var(--branco-pouco-transparent-cabeca);
   font-size: 0.7em;
   font-weight: 400;
-  color: var(--branco-pouco-transparent-cabeca);
 }
 
 .card-stats span {
@@ -87,11 +86,11 @@ body {
 
 @media (min-width: 40em) {
   .card-ima {
+    background-image: url("../images/image-header-desktop.jpg");
+    background-size: cover;
     grid-area: image;
     border-radius: 0 7px 7px 0;
-    background-image: url("../images/image-header-desktop.jpg");
     height: 100%;
-    background-size: cover;
   }
 
   .colorover {
