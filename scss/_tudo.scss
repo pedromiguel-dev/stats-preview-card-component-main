@@ -1,0 +1,116 @@
+body{
+    font-size: 100%;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: var(--azul-palido-escuro);
+    height: 520px;
+    margin: 0 1.2em 0 1.2em;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 65%;
+    grid-template-areas: "image" "conteudo";
+    gap: 0.8em;
+    border-radius: 0.4em;
+}
+.card-ima{
+    grid-area: image;
+    background-image: url("../images/image-header-mobile.jpg");
+    height: 100%    ;
+    background-size: cover;
+    border-radius: 0.4em 0.4em 0 0 ;
+}
+.colorover{
+    border-radius: 0.4em 0.4em 0 0 ;
+    background-color: hsl(286deg 100% 29%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.card-conteudo{
+    grid-area: conteudo;
+    text-align: center;
+    padding: 0px 10px 0 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    a{
+        color: white;
+        font-size: 1.5em;
+        font-weight: 700 ;
+    }
+    span{
+        font-weight: 700;
+        color: var(--violeta-clara);
+    }
+    p{  
+        font-size: 0.7em;
+        font-weight: 400;
+        color: var(--branco-pouco-transparent-cabeca);
+    }
+}
+.card-stats{
+    span{
+        font-size: 1.5em;
+        color: white;
+    }
+    p{
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 0.8em;
+    }
+}
+
+
+@media (min-width: 40em){
+    .card-ima{
+        grid-area: image;
+        border-radius: 0 7px 7px 0;
+        background-image: url("../images/image-header-desktop.jpg");
+        height: 100%;
+        background-size: cover;
+    }
+    .colorover{
+        border-radius: 0 7px 7px 0;
+    }
+    .card-conteudo{
+        text-align: left;
+        grid-area: conteudo;
+        padding: 15%;
+        display: flex;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .textoMid{
+            margin: 0;
+            font-size: 0.6;
+        }
+        .card-stats{
+            width: 100%;
+            display: flex; 
+            flex-direction: row;
+            justify-content: space-between;
+            .statsI{
+                width: min-content;
+            }
+        }
+    }
+    .card{
+            width: 640px;
+            height: 300px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            grid-template-areas:
+            "conteudo image";
+            
+
+    }
+}

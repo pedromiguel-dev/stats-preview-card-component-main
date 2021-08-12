@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --azul-palido-escuro: hsl(244, 38%, 16%);
+  --violeta-clara: hsl(277, 64%, 61%);
+  --branco: white;
+  --branco-pouco-transparente: hsla(0, 0%, 100%, 0.75);
+  --branco-pouco-transparent-cabeca: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-size: 100%;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--azul-palido-escuro);
+  height: 520px;
+  margin: 0 1.2em 0 1.2em;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 65%;
+  grid-template-areas: "image" "conteudo";
+  gap: 0.8em;
+  border-radius: 0.4em;
+}
+
+.card-ima {
+  grid-area: image;
+  background-image: url("../images/image-header-mobile.jpg");
+  height: 100%;
+  background-size: cover;
+  border-radius: 0.4em 0.4em 0 0;
+}
+
+.colorover {
+  border-radius: 0.4em 0.4em 0 0;
+  background-color: #710094;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.card-conteudo {
+  grid-area: conteudo;
+  text-align: center;
+  padding: 0px 10px 0 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-conteudo a {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.card-conteudo span {
+  font-weight: 700;
+  color: var(--violeta-clara);
+}
+.card-conteudo p {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--branco-pouco-transparent-cabeca);
+}
+
+.card-stats span {
+  font-size: 1.5em;
+  color: white;
+}
+.card-stats p {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+@media (min-width: 40em) {
+  .card-ima {
+    grid-area: image;
+    border-radius: 0 7px 7px 0;
+    background-image: url("../images/image-header-desktop.jpg");
+    height: 100%;
+    background-size: cover;
+  }
+
+  .colorover {
+    border-radius: 0 7px 7px 0;
+  }
+
+  .card-conteudo {
+    text-align: left;
+    grid-area: conteudo;
+    padding: 15%;
+    display: flex;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card-conteudo .textoMid {
+    margin: 0;
+    font-size: 0.6;
+  }
+  .card-conteudo .card-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card-conteudo .card-stats .statsI {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  .card {
+    width: 640px;
+    height: 300px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "conteudo image";
+  }
+}/*# sourceMappingURL=style.css.map */
